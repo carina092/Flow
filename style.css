@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0 auto;
     padding: 0;
@@ -7,65 +8,69 @@ html, body {
 }
 
 body {
-    font-size: 24px;
     font-family: "Helvetica", Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1.2;
 }
 
-.parallax {
-    perspective: 1px;
+.placeholder {
+    background-color: rgba(0, 0, 0, 1);
+    height: 101vh;
+}
+
+.placeholder:first-child {
+    margin: 0 0 40px 0;
+}
+
+.placeholder:last-child {
+    margin: 40px 0 0 0;
+}
+
+.display-flow {
+	background-image: linear-gradient(
+		to bottom,
+		transparent 150px,
+		#fff 150px,
+		#fff calc(100% - 150px),
+		transparent 0
+	);
+    margin: auto auto 150px auto;
     height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
+    border: 1px solid purple;
 
-  /* Debug */
-  /* .parallax__group {
-    transform: translate3d(700px, 0, -800px) rotateY(30deg);
-} */
-
-  .parallax__group {
-    position: relative;
-    height: 100vh;
-    transform-style: preserve-3d;
-  }
-
-  .parallax__layer {
-    perspective: 1px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 100vh 0;
-  }
-
-  .parallax__layer--base {
-    transform: translateZ(0);
-    z-index: 1;
-    background-color: yellow;
-  }
-
-  .parallax__layer--back {
-    transform: translateZ(-1px) scale(2);
-    z-index: 2;
-  }
-
-  .content {
     opacity: 0;
-    transition: opacity 1.5s ease-in 0.2s;
+    transition: opacity 1.5s ease-in 1s;
     will-change: opacity;
-  }
+}
 
-  .content.is-visible {
+.display-flow.is-visible {
     opacity: 1;
-  }
+}
 
-  .title1 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: #000;
+.content {
+    position: -webkit-sticky;
+    position: sticky;
+    height: auto;
+    top: 0;
+    padding: 50px 0;
+}
+
+.flow-intro {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 550px;
     text-align: center;
-  }
+}
+
+.flow-intro h1 {
+    margin: 0;
+    font-size: 42px;
+    color: #000;
+}
+
+.flow-intro p {
+    margin: 10px auto 15px auto;
+}
