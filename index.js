@@ -37,3 +37,19 @@ function isElementInViewport(el) {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
     );
   }
+
+// Typewriter
+var flowInput = document.getElementById('flow-input');
+
+var typewriter = new Typewriter(flowInput, {
+  loop: false,
+  delay: 75,
+});
+
+typewriter
+  .pauseFor(4000)
+  .typeString('Hoi,  ')
+  .pauseFor(1500)
+  .typeString('<div class="flow-tag flow-name"><span>Naam</span></div>')
+  .typeString('.')
+  .start();
