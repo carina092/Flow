@@ -49,7 +49,7 @@ var typewriter = new Typewriter(flowInput, {
 typewriter
   .pauseFor(4000)
   .typeString('Hoi,  ')
-  .pauseFor(1500)
+  .pauseFor(3250)
   .typeString('<div class="flow-tag flow-name"><span>Naam</span></div>')
   .typeString('.')
   .start();
