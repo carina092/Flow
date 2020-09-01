@@ -15,8 +15,6 @@ var scroll = window.requestAnimationFrame ||
 var elementsToShow = document.querySelectorAll('.show-on-scroll');
 const toggleVisibility = document.querySelector('.flow-list');
 
-console.log("Toggle: ", toggleVisibility);
-
 function loop() {
 
     elementsToShow.forEach(function (element) {
@@ -35,7 +33,6 @@ function loop() {
           animationStarted = true;
         }
       } else {
-        console.log("Toggle: ", toggleVisibility);
         element.classList.remove('is-visible');
 
         if (animationStarted) {

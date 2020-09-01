@@ -94,7 +94,6 @@ body {
   .close-button:after {
     transform: rotate(-45deg);
   }
-  
 
 .flow-intro {
     display: flex;
