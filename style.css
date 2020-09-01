@@ -54,7 +54,7 @@ body {
     position: sticky;
     height: auto;
     top: 0;
-    padding: 50px 0;
+    padding: 50px;
 }
 
 .close-button {
@@ -84,6 +84,7 @@ body {
     height: 26px;
     width: 2px;
     background-color: #000;
+    transition: all 0.4s ease;
   }
 
   .close-button:before {
@@ -102,25 +103,30 @@ body {
     margin: 0 auto 150px auto;
     width: 100%;
     max-width: 525px;
+    transition: all 0.4s ease;
 }
 
 .flow-intro h1 {
     margin: 0;
     font-size: 42px;
     color: #fff;
+    transition: all 0.4s ease;
 }
 
 .flow-intro p {
     margin: 10px auto 15px auto;
     color: #fff;
     text-align: center;
+    transition: all 0.4s ease;
 }
 
 .card-container {
     background: #252525;
     border-radius: 20px;
-    width: 325px;
+    width: 100%;
+    max-width: 325px;
     padding: 20px;
+    transition: all 0.4s ease;
 }
 
 .card {
@@ -154,6 +160,7 @@ body {
     height: 32px;
     margin: 2px 0;
     padding: 0 10px;
+    transition: all 0.4s ease;
 }
 
 #flow-input {
@@ -175,7 +182,8 @@ body {
     left: 139px;
     opacity: 0;
     transition: opacity 2s ease-in 1s;
-    will-change: opacity;
+    will-change: opacity, left;
+    transition: left 0.4s ease;
 }
 
 .flow-list.is-visible {
@@ -272,4 +280,88 @@ body {
     100% {
         opacity: 0.7;
     }   
+}
+
+@media screen and (max-width: 580px) {
+    .close-button {
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        transition: all 0.4s ease;
+      }
+    
+      .close-button:before, .close-button:after {
+        margin: -8px -1px 0 0;
+        height: 16px;
+        width: 2px;
+        background-color: #000;
+        transition: all 0.4s ease;
+      }
+}
+
+@media screen and (max-width: 520px) {
+    .content {
+        padding: 50px 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .flow-intro {
+        margin: 0 auto 100px auto;
+        transition: all 0.4s ease;
+    }
+
+    .flow-intro h1 {
+        font-size: 38px;
+        transition: all 0.4s ease;
+    }
+
+    .flow-intro p {
+        font-size: 18px;
+        transition: all 0.4s ease;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .content {
+        padding: 50px 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .card-container {
+        padding: 20px 10px;
+        transition: all 0.4s ease;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .card-container {
+        max-width: 300px;
+        transition: all 0.4s ease;
+    }
+
+    .input {
+        max-width: 175px;
+        transition: all 0.4s ease;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .card-container {
+        max-width: 270px;
+        transition: all 0.4s ease;
+    }
+
+    .input {
+        max-width: 150px;
+        transition: all 0.4s ease;
+    }
+
+    .flow-list {
+        left: 137px;
+        transition: all 0.4s ease;
+    }
 }
